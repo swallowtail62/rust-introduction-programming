@@ -5,6 +5,7 @@ use anyhow::Result;
 use clap::Clap;
 
 use crate::calculator::RpnCalculator;
+use std::path::PathBuf;
 
 mod calculator;
 
@@ -20,7 +21,7 @@ struct Opts {
     verbose: bool,
 
     #[clap(name = "FILE")]
-    formula_file: Option<String>,
+    formula_file: Option<PathBuf>,
 }
 
 fn main() -> Result<()> {
