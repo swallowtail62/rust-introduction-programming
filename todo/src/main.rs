@@ -1,7 +1,11 @@
 use actix_web::{App, get, HttpResponse, HttpServer};
 
+use crate::error::MyError;
+
+mod error;
+
 #[get("/")]
-async fn index() -> Result<HttpResponse, actix_web::Error> {
+async fn index() -> Result<HttpResponse, MyError> {
     let response_body = "Hello world!";
     Ok(HttpResponse::Ok().body(response_body))
 }
