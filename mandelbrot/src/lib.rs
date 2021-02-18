@@ -1,4 +1,5 @@
 mod utils;
+mod logic;
 
 use wasm_bindgen::prelude::*;
 
